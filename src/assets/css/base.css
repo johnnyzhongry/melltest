@@ -1,0 +1,11 @@
+@import url("./normalize.css");
+/* css中定义变量 */
+:root{
+	--color-text:#666;
+	--color-tint:#ff8198
+}
+body{
+	margin: 0;
+	padding: 0;
+	color: var(--color-text);
+}
