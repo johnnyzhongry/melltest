@@ -1,26 +1,19 @@
-// module.exports={
-// 	configureWebpack:{
-// 		resolve:{
-// 			alias:{
-// 				'assets':'@/assets',
-// 				'common':'@/common',
-// 				'componets':'@/components',
-// 				'network':'@/network',
-// 			}
-// 		}
-// 	}
-// }
-const path = require('path');//引入path模块
-function resolve(dir){
-    return path.join(__dirname,dir)//path.join(__dirname)设置绝对路径
+const path = require('path')
+ 
+// 拼接路径
+function resolve(dir) {
+  return path.join(__dirname, dir)
 }
-module.exports={
-    chainWebpack:(config)=>{
-        config.resolve.alias
-        .set('@',resolve('src'))
-        .set('components',resolve('src/components'))
-        .set('views',resolve('src/views'))
-        .set('@assets',resolve('./src/assets'))
-        //set第一个参数：设置的别名，第二个参数：设置的路径
-　　　　
-    }
+module.exports = {
+  // publicPath: './', // 部署应用包时的基本 URL Default: '/'
+  // outputDir: 'dist',
+  // assetsDir: 'static', // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
+  // indexPath: 'index.html', // 指定生成的 index.html 的输出路径 (相对于 outputDir)。也可以是一个绝对路径。 Default: 'index.html'
+  chainWebpack: config => {
+    config.resolve.alias
+      .set('@', resolve('./src'))
+      .set('_assets', resolve('./src/assets'))
+      .set('_components', resolve('./src/components'))
+      .set('common', resolve('src/common'))
+  }
+}

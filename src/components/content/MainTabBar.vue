@@ -5,12 +5,12 @@
 			<!-- <img src="../assets/img/tarbar/help.png" alt="" slot="item-icon" /> -->
 			<!-- 具名插槽的新写法 2.6之后 -->
 			<template v-slot:item-icon>
-				<img src="../../assets/img/tarbar/help.png" alt="" slot="item-icon" />
+				<img src="~_assets/img/tarbar/help.png" alt="" slot="item-icon" />
 			</template>
 			<img src="../../assets/img/tarbar/help_filled.png" alt="" slot="item-active"/>
 			<div slot="item-name">首页</div>
 		</TabBarItem>
-		<TabBarItem path="/category" activeColor="blue">
+		<TabBarItem path="/category" activeColor="pink">
 			<img src="../../assets/img/tarbar/star.png" alt="" slot="item-icon"/>
 			<img src="../../assets/img/tarbar/star_filled.png" alt="" slot="item-active"/>
 			<div slot="item-name">分类</div>
