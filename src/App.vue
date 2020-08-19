@@ -6,8 +6,7 @@
   </div>
 </template>
 <script>
-	//配置路径 vue文件中可以直接使用别名 html中需要加~
-	import MainTabBar from '_components/content/MainTabBar.vue'
+	import MainTabBar from './components/content/MainTabBar.vue'
 	export default{
 		name:"App",
 		components:{
